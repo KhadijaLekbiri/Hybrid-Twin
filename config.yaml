@@ -1,0 +1,28 @@
+model:
+  input_size: 4
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.2
+  batch_size: 32
+  epochs: 50
+  lr: 0.001
+  alpha: 1.0
+  beta: 0.01
+
+paths:
+  dataset_dir: "dataset"
+  output_file: "dataset/hybrid_twin_dataset.csv"
+  data_dir: "dataset/data"
+  output_dir: "outputs/checkpoints"
+
+simulation:
+  seed: 123
+  n_simulations: 1000
+  seq_length: 100
+  dt: 0.01
+  r: 3
+  ak_modes: [1.2, -0.8, 0.5]
+  mapping_matrix:
+    - [0.15, 0.30, 0.45]
+    - [0.30, -0.15, 0.15]
+    - [-0.15, 0.45, 0.30]
